@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="title">LISTAR CARTÃO</h5>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let cartao of listCartoes">
+                    <td>{{ cartao.titular }}</td>
+                    <td>{{ cartao.numeroCartao }}</td>
+                    <td>{{ cartao.dataExpiracao }}</td>
+                    <td>
+                        <i (click)="editarCartao(cartao)" class="fa-regular fa-pen-to-square text-info"></i>
+                        <i (click)="deletarCartao(cartao.id)" class="fa-solid fa-trash-can text-danger"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
